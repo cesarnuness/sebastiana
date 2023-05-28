@@ -1,0 +1,104 @@
+:root {
+  --cor-primaria: #ff6b6b; /* Vermelho */
+  --cor-secundaria: #ffe66d; /* Amarelo */
+  --cor-fundo: #f3f4ed; /* Bege */
+  --cor-texto: #333333; /* Preto */
+}
+
+/* Content2 */
+.content2 {
+  overflow-y: auto;
+  max-height: 800px; /* Define a altura máxima para a área de rolagem */
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent; /* Oculta a barra de rolagem */
+}
+
+.content2::-webkit-scrollbar {
+  width: 6px;
+}
+
+.content2::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.content2::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Media Query */
+@media screen and (max-width: 1000px) {
+  .content1 {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content3 {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body {
+    font-size: 0.7em;
+  }
+}
+
+/* Estilos Gerais */
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--cor-primaria);
+}
+
+a {
+  color: var(--cor-secundaria);
+}
+
+/* Estilos do Menu */
+.nav-link {
+  color: var(--cor-texto);
+}
+
+.nav-link:hover {
+  color: var(--cor-primaria);
+}
+
+/* Estilos do Botão */
+.button {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto);
+}
+
+/* Estilos do Rodapé */
+
+footer {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto);
+  padding: 20px;
+  text-align: center;
+}
+
+.logo img {
+  width: 150px; /* Ajuste o tamanho conforme necessário */
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-icons img {
+  width: 30px; /* Ajuste o tamanho conforme necessário */
+}
