@@ -80,7 +80,7 @@ a {
 /* Estilos do Rodapé */
 
 footer {
-  background-color: var(--cor-secundaria);
+  background-color: var(--cor-fundo);
   color: var(--cor-texto);
   padding: 20px;
   text-align: center;
