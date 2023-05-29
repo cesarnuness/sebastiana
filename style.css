@@ -95,6 +95,16 @@ footer {
     flex-wrap: wrap;
   }
 
+  .gestao {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin: 20px 0px;
+    width: 100%;
+    height: fit-content;
+    flex-wrap: wrap;
+  }
+
   .nav-link {
     font-size: 0.8em;
   }
@@ -126,51 +136,10 @@ footer {
   text-align: left;
 }
 
-/* Estilos para a janela modal */
-.modal {
-  display: none; /* Inicialmente escondido */
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1050;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  outline: 0;
-}
-
-.modal-dialog {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-  background-color: white;
-  border-radius: 8px;
-  max-width: 600px;
-  width: 90%;
-}
-
-.modal-header {
-  padding: 1rem;
-  background-color: var(--cor-primaria);
-  color: white;
-  border-radius: 8px 8px 0 0;
-}
-
-.modal-title {
-  margin: 0;
-  font-size: 1.25rem;
-}
-
-.modal-body {
-  padding: 1rem;
-}
-
 .gestor {
   display: flex;
   align-items: center;
-  margin-bottom: 1.5rem;
+  margin: 2rem 0;
 }
 
 .gestor img {
@@ -189,13 +158,30 @@ footer {
   margin: 0;
 }
 
-/* Estilos para o botão "Gestão" */
-.nav-link[data-bs-toggle="modal"] {
-  cursor: pointer;
+.gestao {
+  margin: 2px solid var(--cor-primaria);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  width: fit-content;
+  flex-wrap: nowrap;
 }
 
-.modal-centered {
+.col-lg-4 > .gestao {
+  width: 100%;
+}
+
+.equipe > h2 {
+  margin: 20px 0;
+}
+
+.professores {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.container > h1 {
+  margin: 20px 0;
+  font-weight: bold;
 }
