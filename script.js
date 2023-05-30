@@ -1,5 +1,5 @@
-import renderGestao from "./view/viewGestao.js";
-import view from "./view/view.js";
+import renderEquipe from "./src/view/viewEquipe.mjs";
+import renderInicio from "./src/view/viewInicio.mjs";
 
 // // JavaScript code for infinite scrolling
 // let newsContainer = document.getElementById("news-container");
@@ -19,9 +19,22 @@ const inicio = document.getElementById("btn--inicio");
 const simulados = document.getElementById("btn--simulados");
 const equipe = document.getElementById("btn--equipe");
 const galeria = document.getElementById("btn--galeria");
-const body = document.getElementById("body");
+const principal = document.querySelector(".principal");
 
 equipe.addEventListener("click", function () {
-  body.innerHTML = "";
-  body.innerHTML = renderGestao();
+  principal.innerHTML = "";
+  principal.insertAdjacentHTML("beforeend", renderEquipe());
+});
+
+inicio.addEventListener("click", function () {
+  principal.innerHTML = "";
+  principal.insertAdjacentHTML("beforeend", renderInicio());
+});
+
+simulados.addEventListener("click", function () {
+  // Add your code here for the "Simulados" button functionality
+});
+
+galeria.addEventListener("click", function () {
+  // Add your code here for the "Galeria" button functionality
 });
