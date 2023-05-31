@@ -1,6 +1,6 @@
 :root {
   --cor-primaria: #ff6b6b; /* Vermelho */
-  --cor-secundaria: #ffe66d; /* Amarelo */
+  --cor-secundaria: #0a1831; /* Amarelo */
   --cor-fundo: #f3f4ed; /* Bege */
   --cor-texto: #333333; /* Preto */
 }
@@ -183,4 +183,34 @@ footer {
 .container > h1 {
   margin: 20px 0;
   font-weight: bold;
+}
+
+.simulados {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+}
+
+.simulado {
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.simulado h3 {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.simulado a {
+  color: #0066cc;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.simulado a:hover {
+  text-decoration: underline;
 }

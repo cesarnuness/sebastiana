@@ -1,5 +1,6 @@
 import renderEquipe from "./src/view/viewEquipe.mjs";
 import renderInicio from "./src/view/viewInicio.mjs";
+import renderSimulados from "./src/view/viewSimulados.mjs";
 
 // // JavaScript code for infinite scrolling
 // let newsContainer = document.getElementById("news-container");
@@ -32,7 +33,8 @@ inicio.addEventListener("click", function () {
 });
 
 simulados.addEventListener("click", function () {
-  // Add your code here for the "Simulados" button functionality
+  principal.innerHTML = "";
+  principal.insertAdjacentHTML("beforeend", renderSimulados());
 });
 
 galeria.addEventListener("click", function () {
