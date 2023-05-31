@@ -214,3 +214,35 @@ footer {
 .simulado a:hover {
   text-decoration: underline;
 }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.event {
+  text-align: center;
+}
+
+.main-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.description {
+  margin-top: 10px;
+}
+
+.carousel {
+  display: none;
+  margin-top: 10px;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}

@@ -1,20 +1,7 @@
 import renderEquipe from "./src/view/viewEquipe.mjs";
 import renderInicio from "./src/view/viewInicio.mjs";
 import renderSimulados from "./src/view/viewSimulados.mjs";
-
-// // JavaScript code for infinite scrolling
-// let newsContainer = document.getElementById("news-container");
-// let newsContent = document.getElementById("news-content");
-
-// newsContainer.addEventListener("scroll", function () {
-//   if (
-//     newsContainer.scrollTop + newsContainer.clientHeight >=
-//     newsContent.offsetHeight
-//   ) {
-//     // When the user reaches the bottom of the container, add more news content
-//     newsContent.innerHTML += newsContent.innerHTML; // Append the existing news content
-//   }
-// });
+import renderGaleria from "./src/view/viewGaleria.mjs";
 
 const inicio = document.getElementById("btn--inicio");
 const simulados = document.getElementById("btn--simulados");
@@ -22,21 +9,23 @@ const equipe = document.getElementById("btn--equipe");
 const galeria = document.getElementById("btn--galeria");
 const principal = document.querySelector(".principal");
 
-equipe.addEventListener("click", function () {
+function renderContent(content) {
   principal.innerHTML = "";
-  principal.insertAdjacentHTML("beforeend", renderEquipe());
+  principal.insertAdjacentHTML("beforeend", content);
+}
+
+inicio.addEventListener("click", () => {
+  renderContent(renderInicio());
 });
 
-inicio.addEventListener("click", function () {
-  principal.innerHTML = "";
-  principal.insertAdjacentHTML("beforeend", renderInicio());
+equipe.addEventListener("click", () => {
+  renderContent(renderEquipe());
 });
 
-simulados.addEventListener("click", function () {
-  principal.innerHTML = "";
-  principal.insertAdjacentHTML("beforeend", renderSimulados());
+simulados.addEventListener("click", () => {
+  renderContent(renderSimulados());
 });
 
-galeria.addEventListener("click", function () {
-  // Add your code here for the "Galeria" button functionality
+galeria.addEventListener("click", () => {
+  renderContent(renderGaleria());
 });
